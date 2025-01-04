@@ -1,5 +1,11 @@
 export const DATA = {
     aboutMe: "AWS Certified | Full-stack developer skilled in seamless user experiences, efficient backend systems, & cloud integration. Proficient in React & Node.js. Delivering solutions that drive growth & elevate platforms.",
+    roles: [
+        "Full-stack Developer",
+        "Software Engineer",
+        "AWS Certified Developer",
+        "Something funny"
+    ],
     contact: {
         email: "vladimir.elisavetsky@gmail.com",
         phone: "206-555-1234",
@@ -19,7 +25,7 @@ export const DATA = {
             company: "Microsoft",
             title: "Software Engineer Intern",
             startDate: "May 2018",
-            endDate: "August 2018", 
+            endDate: "August 2018",
             length: "4 mos",
             description: "Developed and maintained software solutions for Microsoft's Azure platform. Worked with a team of engineers to build and deploy cloud-based applications. Collaborated with cross-functional teams to deliver high-quality software solutions."
         }
@@ -39,28 +45,40 @@ export const DATA = {
             endDate: "June 2019",
             description: "Studied computer science and software engineering. Developed software applications and systems. Graduated with a 3.9 GPA."
         },
-        Certifications = [
-            {
-                name: "AWS Certified Developer",
-                date: "June 2020",
-                description: "Certified by Amazon Web Services as a Developer. Demonstrated proficiency in developing, deploying, and maintaining applications on AWS.",
-                organization: "Amazon Web Services",
-                logo: {awsCertifiedDeveloper}
-            },
-            {
-                name: "AWS Certified Solutions Architect",
-                date: "June 2020",
-                description: "Certified by Amazon Web Services as a Solutions Architect. Demonstrated proficiency in designing, deploying, and managing applications on AWS.",
-                organization: "uDemy",
-                logo: {awsUdemy}
-            }
-        ]
-    ],
-    skills: [
-        {
 
+    ],
+    Certifications: [
+        {
+            name: "AWS Certified Developer",
+            date: "June 2020",
+            description: "Certified by Amazon Web Services as a Developer. Demonstrated proficiency in developing, deploying, and maintaining applications on AWS.",
+            organization: "Amazon Web Services",
+            // logo: {awsCertifiedDeveloper}
+        },
+        {
+            name: "AWS Certified Solutions Architect",
+            date: "June 2020",
+            description: "Certified by Amazon Web Services as a Solutions Architect. Demonstrated proficiency in designing, deploying, and managing applications on AWS.",
+            organization: "uDemy",
+            // logo: {awsUdemy}
         }
     ],
+    skills: {
+        frontEnd: [
+            {
+                name: "React",
+                src: "@/assets/icons/react.svg"
+            },
+            {
+                name: "Angular",
+                src: "/assets/icons/angular.svg",
+            },
+            {
+                name: "Vue",
+                src: "/assets/icons/vue.svg",
+            },
+        ]
+    },
     links: [
         {
             name: "LinkedIn",
