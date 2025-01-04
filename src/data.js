@@ -47,7 +47,6 @@ export const DATA = {
             endDate: "June 2019",
             description: "Studied computer science and software engineering. Developed software applications and systems. Graduated with a 3.9 GPA."
         },
-
     ],
     Certifications: [
         {

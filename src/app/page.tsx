@@ -3,6 +3,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import Timelines from "./components/Timeline";
 import SkillsSection from "./components/Skills";
+import Education from "./components/Education";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Timelines />
       <SkillsSection />
+      <Education />
     </div>
   );
 }

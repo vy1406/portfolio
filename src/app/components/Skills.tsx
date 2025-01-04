@@ -29,7 +29,7 @@ export default function SkillsSection() {
     }, []);
 
     return (
-        <section className="py-8 bg-gray-100 dark:bg-gray-900"  ref={sectionRef}>
+        <section className="py-8" ref={sectionRef}>
             <SkillsCard list={DATA.skills.frontEnd.list} title={DATA.skills.frontEnd.title}/>
             <SkillsCard list={DATA.skills.frontEnd.list} title={DATA.skills.frontEnd.title}/>
         </section>
