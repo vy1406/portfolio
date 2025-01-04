@@ -1,53 +1,37 @@
-import React from "react";
-import Image from "next/image";
-import ReactIcon from "@/assets/icons/react.svg";
+"use client"
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { DATA } from "../../data";
+import SkillsCard from "./SkillCard";
 
-const frontendSkills = [
-  {
-    name: "React",
-    src: ReactIcon,
-  },
-  {
-    name: "Angular",
-    src: ReactIcon,
-  },
-  {
-    name: "Vue",
-    src: ReactIcon,
-  },
-];
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SkillsSection() {
-  return (
-    <section className="py-8 bg-gray-100 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
-          Frontend Skills
-        </h2>
+    const sectionRef = useRef<HTMLDivElement>(null);
 
-        <div className="flex flex-wrap gap-4 justify-center">
-          {frontendSkills.map((skill, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-4 bg-white border border-gray-200 rounded-lg shadow-md p-4 hover:shadow-lg dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-            >
-              <div className="w-10 h-10 flex-shrink-0">
-                <Image
-                  src={skill.src}
-                  alt={skill.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-              </div>
+    useEffect(() => {
+      const cards = sectionRef.current?.querySelectorAll(".skills-card");
+  
+      if (cards) {
+        gsap.from(cards, {
+          x: 200, 
+          opacity: 0,
+          duration: 1,
+          stagger: 0.3, 
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 65%",
+            toggleActions: "play none none none",
+          },
+        });
+      }
+    }, []);
 
-              <h3 className="text-lg font-medium text-gray-800 dark:text-gray-200">
-                {skill.name}
-              </h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section className="py-8 bg-gray-100 dark:bg-gray-900"  ref={sectionRef}>
+            <SkillsCard list={DATA.skills.frontEnd.list} title={DATA.skills.frontEnd.title}/>
+            <SkillsCard list={DATA.skills.frontEnd.list} title={DATA.skills.frontEnd.title}/>
+        </section>
+    );
 }

@@ -1,3 +1,5 @@
+import ReactIcon from "@/assets/icons/react.svg";
+
 export const DATA = {
     aboutMe: "AWS Certified | Full-stack developer skilled in seamless user experiences, efficient backend systems, & cloud integration. Proficient in React & Node.js. Delivering solutions that drive growth & elevate platforms.",
     roles: [
@@ -64,20 +66,23 @@ export const DATA = {
         }
     ],
     skills: {
-        frontEnd: [
-            {
-                name: "React",
-                src: "@/assets/icons/react.svg"
-            },
-            {
-                name: "Angular",
-                src: "/assets/icons/angular.svg",
-            },
-            {
-                name: "Vue",
-                src: "/assets/icons/vue.svg",
-            },
-        ]
+        frontEnd: {
+            title: "Front-end",
+            list: [
+                {
+                    name: "React",
+                    src: ReactIcon
+                },
+                {
+                    name: "Angular",
+                    src: ReactIcon
+                },
+                {
+                    name: "Vue",
+                    src: ReactIcon
+                },
+            ]
+        }
     },
     links: [
         {
